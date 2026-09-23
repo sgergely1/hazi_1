@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Algoritmusok</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body data-bs-theme="dark">
+		<nav id="MainNav" class="navbar navbar-expand-sm p-0 bg-body-tertiary col-12 col-sm-4 col-lg-3 col-xl-2">
+			<div id="MainNavList" class="m-3">
+				<a class="navbar-brand fs-3 m-3 ms-0" href="#">Algoritmusok</a>
+				<button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#MainNavCollapse" aria-controls="MainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="MainNavCollapse">
+					<ul class="d-flex-row navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link pb-1" aria-current="page" href="#Algorithms">Algoritmusok</a>
+							<ul class="navbar-nav ms-2">
+								<li class="nav-item">
+									<a class="nav-link py-1" aria-current="page" href="#WAA">Mi egy algoritmus?</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link py-1" aria-current="page" href="#Reqs">"Követelmények"</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#Types">Fajtái</a>
+							<ol class="navbar-nav ms-2" id="TypesList">
+								<li class="nav-item">
+									<a class="nav-link py-1" aria-current="page" href="#Type1">1. Mondatos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link py-1" aria-current="page" href="#Type2">2. Folyamat ábra</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link py-1" aria-current="page" href="#Type3">3. Pseudo code</a>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="col-12 col-sm-8 col-lg-9 col-xl-10 float-end my-3">
+			<div class="container-md pt-5 pt-md-0" id="MainContent">
+				<h1 id="Algorithms">Algoritmusok</h1>
+				<section>
+					<h2 id="WAA" class="fs-3">Mi egy algoritmus?</h2>
+					<p>Egy algoritmus az egy probléma megoldására szolgáló véges, egyértelmű lépésekből álló sorozat.</p>
+				</section>
+				<section>
+					<h2 id="Reqs" class="fs-3">"Követelmények"</h2>
+					<p>Egy algoritmusnak 4 fő követelénye van.</p>
+					<ol>
+						<li>Determinisztikus, ugyanazokkal a bemenetekkel ugyanaz a kimenet jön ki, minden alkalommal.</li>
+						<li>Nem végtelen. Egy algoritmusnak véges számú instrukciója van. Nem futhat örökké.</li>
+						<li>Egy utasítást csak egy módon lehet végrehajtani.</li>
+						<li>Általános, nem specifikus.</li>
+					</ol>
+				</section>
+				<section>
+					<h2 id="Types" class="fs-3">Fajtái</h2>
+					<p>Egy algoritmust 3 módon lehet "ábrázolni": mondatos, folyamatábra, és pseudo code. Magyarázatuk és példa:</p>
+					<h3 id="Type1" class="fs-4">Mondatos</h3>
+					<p>Egy mondatos algoritmusba az instrukciók számozottan, mondatokba vannak leírva.</p>
+					<p class="d-inline-flex gap-1">
+						<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#Prose" aria-expanded="false" aria-controls="Prose">
+							Példa mondatos algoritmus megjelenítése/eltüntetése
+						</button>
+					</p>
+					<div class="collapse" id="Prose">
+						<p class="fw-bold ms-2">Példa mondatos négyzetre emeléshez:</p>
+						<ol>
+							<li>Kérjük be a négyzet alapot (alap).</li>
+							<li>Legyen a négyzet egyenlő alap * alappal.</li>
+							<li>Írjuk ki a négyzetet.</li>
+							<li>Vége</li>
+						</ol>
+					</div>
+					<h3 id="Type2" class="fs-4">Folyamat ábra</h3>
+					<p>Ez egy rajz, ahol jelek és ábrák használatával lehet jelölni az algoritmus menetét.</p>
+					<p class="d-inline-flex gap-1">
+						<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#FlowChart" aria-expanded="false" aria-controls="FlowChart">
+							Példa folyamatábra megjelenítése/eltüntetése
+						</button>
+					</p>
+					<div class="collapse" id="FlowChart">
+						<p class="fw-bold ms-2">Példa folyamatábra négyzetre emeléshez:</p>
+						<!-- Csak CSS és HTML -->
+						<div class="FlowChart col-12 col-md-10 col-lg-8 col-xl-6">
+							<div class="circle">Start</div>
+							<div class="arrow"></div>
+							<div class="pgramma">Be: Alap</div>
+							<div class="arrow"></div>
+							<div class="square">Négyzet &lt;- Alap * Alap</div>
+							<div class="arrow"></div>
+							<div class="pgramma">Ki: Négyzet</div>
+							<div class="arrow"></div>
+							<div class="circle">End</div>
+						</div>
+					</div>
+					<h3 id="Type3" class="fs-4">Pseudo code</h3>
+					<p>Ez egy olyan módja az algoritmusok megjelenítésére amely bármilyen programozási nyelvbe átirható, és legjobban hasonlít írt kódra.</p>
+					<p class="d-inline-flex gap-1">
+						<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#PseudoCode" aria-expanded="false" aria-controls="PseudoCode">
+							Példa pseudo code megjelenítése/eltüntetése
+						</button>
+					</p>
+					<div class="collapse" id="PseudoCode">
+						<p class="fw-bold ms-2">Példa pseudo hatványozáshoz:</p>
+						<pre><code>be: alap
+be: kitevő
+
+ha kitevő = 0 akkor
+	ki: 1
+különben ha kitevő = 1 akkor
+	ki: alap
+különben ha kitevő = -1 akkor
+	reciprok &lt;- 1 / alap
+	ki: reciprok
+különben ha kitevő &gt; 0 akkor
+	eredmény &lt;- alap
+	ciklus i &lt;- 2-től kitevő-ig
+		eredmény &lt;- eredmény * alap
+	ciklus vége
+	ki: eredmény
+különben
+	eredmény &lt;- alap
+	ciklus i &lt;- kitevő-től -2-ig
+		eredmény &lt;- eredmény * alap
+	ciklus vége
+	reciprok &lt;- 1 / eredmény
+	ki: reciprok
+elágazás vége</code></pre>
+					</div>
+				</section>
+				<footer>
+					<p class="float-end text-secondary m-sm-5 px-md-5">Készítette Solymos Gergely!</p>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

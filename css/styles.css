@@ -1,0 +1,113 @@
+#MainNav {
+	height: 100vh;
+	position: fixed;
+}
+
+@media (max-width: 576px) {
+	#MainNav {
+		height: fit-content;
+		position: fixed;
+	}
+
+	#MainNavFlex {
+		height: unset;
+		flex-direction: row;
+	}
+}
+
+#MainNavHead {
+	height: fit-content;
+	flex-shrink: 1;
+	top: 0;
+}
+
+#MainNavFlex {
+	height: 100vh;
+}
+
+#MainNavList {
+	flex-grow: 1;
+}
+
+#MainContent {
+	overflow-wrap: break-word;
+}
+
+h1, h2 {
+	margin-top: 1rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+pre {
+	border: 1px black solid;
+	background-color: #0001;
+	padding: 5px;
+	border-radius: 1px;
+	margin: 1rem;
+
+
+	tab-size: 4;
+	-moz-tab-size: 4;
+}
+
+.FlowChart {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	border-radius: 100%;
+	border: 2px white solid;
+	width: fit-content;
+	padding: 0.5rem 1rem;
+}
+
+.square {
+	border: 2px white solid;
+	width: fit-content;
+	padding: 0.5rem 1rem;
+}
+
+.pgramma {
+	position: relative;
+	width: fit-content;
+	padding: 0.5rem 1rem;
+}
+
+.pgramma::before {
+	position: absolute;
+	content: " ";
+	inset: 0;
+	border: 2px white solid;
+	transform: skewX(-30deg);
+}
+
+.arrow {
+	width: 2px;
+	background-color: white;
+	height: 2rem;
+	margin: 0.5rem;
+}
+.arrow::before {/*
+	width: 0.75rem;
+	height: 0.75rem;
+	background-color: white;
+	clip-path: rect(1px, 1px, 8px, 8px);*/
+	/*transform: translateX(calc(-0.475rem + 2px)) translateY(1.25rem) rotate(45deg);*/
+	display: block;
+	transform: translateY(calc(2rem + 2px)) rotate(-90deg);
+	line-height: 0;
+	content: "<";
+	z-index: -999;
+	font-weight: bold;
+}
+
+#MainNavCollapse ul, #MainNavCollapse ol {
+	display: flex !important;
+	flex-direction: column !important;
+}
