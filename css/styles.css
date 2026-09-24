@@ -85,7 +85,7 @@ pre {
 }
 
 .pgramma::before {
-	position: absolute;
+	position: absolute !important;
 	content: " ";
 	inset: 0;
 	border: 2px white solid;
