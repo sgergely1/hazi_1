@@ -62,7 +62,7 @@ pre {
 
 .FlowChart div, .FlowChart div::before, hr {
 	z-index: -999;
-	display: block;
+	position: relative;
 }
 
 .circle {
