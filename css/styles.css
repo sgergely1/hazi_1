@@ -60,6 +60,11 @@ pre {
 	align-items: center;
 }
 
+.FlowChart div, .FlowChart div::before, hr {
+	z-index: -999;
+	position: relative;
+}
+
 .circle {
 	border-radius: 100%;
 	border: 2px white solid;
@@ -80,7 +85,7 @@ pre {
 }
 
 .pgramma::before {
-	position: absolute;
+	position: absolute !important;
 	content: " ";
 	inset: 0;
 	border: 2px white solid;
